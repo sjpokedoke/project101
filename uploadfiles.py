@@ -13,7 +13,7 @@ class TransferData:
             for filename in files:
                 localpath = os.path.join(root, filename)
                 relativepath = os.path.relpath(localpath, source)
-                dropboxpath = os.path.join(root, filename)
+                dropboxpath = os.path.join(dest, relativepath)
                 with open(localpath, 'rb') as f:
                     dbx.files_upload(f.read(), dropboxpath, mode=WriteMode('overwrite'))
 def main():
