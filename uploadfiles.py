@@ -23,6 +23,6 @@ def main():
     source = input('Enter the folder path to transfer: ')
     dest = input('Enter the full path to upload to dropbox: ')
 
-    transferData.uploadfiles(source, dest)
+    transferData.files_upload(source, dest)
     print('File has been moved successfully')
 main()
